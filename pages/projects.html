@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>作品集</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body class="page-shell">
+    <main class="xp-window portfolio-window">
+      <header class="window-titlebar">
+        <span>作品集 - Personal Website</span>
+        <div class="window-controls">
+          <button type="button" data-window-minimize aria-label="最小化"></button>
+          <button type="button" data-window-maximize aria-label="最大化"></button>
+          <button type="button" data-window-close aria-label="关闭并返回桌面"></button>
+        </div>
+      </header>
+      <div class="portfolio-body">
+        <aside class="page-sidebar">
+          <a class="home-button" href="../index.html">返回桌面</a>
+          <nav aria-label="页面导航">
+            <a href="about.html">关于我</a>
+            <a href="projects.html">作品集</a>
+            <a href="resume.html">履历</a>
+            <a href="contact.html">联系</a>
+          </nav>
+        </aside>
+        <article class="content-panel">
+          <div class="editor-bar">
+            <button class="editor-button" type="button" data-editor-toggle aria-pressed="false">编辑</button>
+            <button class="editor-button" type="button" data-editor-reset>恢复默认</button>
+            <span class="editor-status" data-editor-status></span>
+          </div>
+          <section data-editable-page="projects" contenteditable="false">
+            <h1>作品集</h1>
+            <p>把你的项目放在这里。每个项目可以写背景、你的角色、过程、结果和链接。</p>
+            <ul class="project-list">
+              <li class="project-card">
+                <h2>项目一</h2>
+                <p>项目简介、使用工具、你的贡献，以及最终成果。</p>
+              </li>
+              <li class="project-card">
+                <h2>项目二</h2>
+                <p>适合放交互、视觉、研究、影像、写作或代码作品。</p>
+              </li>
+              <li class="project-card">
+                <h2>项目三</h2>
+                <p>这里也可以替换成图片、视频链接或更完整的案例研究。</p>
+              </li>
+              <li class="project-card">
+                <h2>项目四</h2>
+                <p>后续可以继续拆成独立项目详情页。</p>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+    <script src="../assets/editor.js"></script>
+  </body>
+</html>

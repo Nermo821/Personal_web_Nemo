@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>履历</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body class="page-shell">
+    <main class="xp-window portfolio-window">
+      <header class="window-titlebar">
+        <span>履历 - Personal Website</span>
+        <div class="window-controls">
+          <button type="button" data-window-minimize aria-label="最小化"></button>
+          <button type="button" data-window-maximize aria-label="最大化"></button>
+          <button type="button" data-window-close aria-label="关闭并返回桌面"></button>
+        </div>
+      </header>
+      <div class="portfolio-body">
+        <aside class="page-sidebar">
+          <a class="home-button" href="../index.html">返回桌面</a>
+          <nav aria-label="页面导航">
+            <a href="about.html">关于我</a>
+            <a href="projects.html">作品集</a>
+            <a href="resume.html">履历</a>
+            <a href="contact.html">联系</a>
+          </nav>
+        </aside>
+        <article class="content-panel">
+          <div class="editor-bar">
+            <button class="editor-button" type="button" data-editor-toggle aria-pressed="false">编辑</button>
+            <button class="editor-button" type="button" data-editor-reset>恢复默认</button>
+            <span class="editor-status" data-editor-status></span>
+          </div>
+          <section data-editable-page="resume" contenteditable="false">
+            <h1>履历</h1>
+            <h2>教育经历</h2>
+            <p>学校 / 专业 / 时间。这里可以写课程方向、研究主题或毕业项目。</p>
+            <h2>工作与实践</h2>
+            <ul>
+              <li>经历一：你的职责、成果和使用的方法。</li>
+              <li>经历二：参与的项目、协作对象和最终交付。</li>
+              <li>经历三：奖项、展览、发表或其它重要节点。</li>
+            </ul>
+            <h2>技能</h2>
+            <p>设计工具、前端技术、研究方法、语言能力或其它与你作品相关的能力。</p>
+          </section>
+        </article>
+      </div>
+    </main>
+    <script src="../assets/editor.js"></script>
+  </body>
+</html>
