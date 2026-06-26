@@ -7,66 +7,253 @@
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body class="xp-body">
-    <main class="desktop" aria-label="Windows XP 风格个人作品集桌面">
-      <section class="desktop-grid" aria-label="桌面图标">
-        <a class="desktop-icon" href="pages/about.html" data-open="关于我">
+    <main class="desktop" data-i18n-aria="desktop.aria" aria-label="Windows XP 风格个人作品集桌面">
+      <section class="desktop-grid" data-i18n-aria="desktop.icons.aria" aria-label="桌面图标">
+        <button class="desktop-icon" type="button" data-open-app="about" data-open="关于我">
           <span class="icon-art computer" aria-hidden="true"></span>
-          <span>关于我</span>
-        </a>
-        <a class="desktop-icon" href="pages/projects.html" data-open="作品集">
+          <span data-i18n="icon.about">关于我</span>
+        </button>
+        <button class="desktop-icon" type="button" data-open-app="projects" data-open="作品集">
           <span class="icon-art folder" aria-hidden="true"></span>
-          <span>作品集</span>
-        </a>
-        <a class="desktop-icon" href="pages/resume.html" data-open="履历">
+          <span data-i18n="icon.projects">作品集</span>
+        </button>
+        <button class="desktop-icon" type="button" data-open-app="resume" data-open="履历">
           <span class="icon-art document" aria-hidden="true"></span>
-          <span>履历</span>
-        </a>
-        <a class="desktop-icon" href="pages/contact.html" data-open="联系">
+          <span data-i18n="icon.resume">履历</span>
+        </button>
+        <button class="desktop-icon" type="button" data-open-app="contact" data-open="联系">
           <span class="icon-art mail" aria-hidden="true"></span>
-          <span>联系</span>
-        </a>
+          <span data-i18n="icon.contact">联系</span>
+        </button>
       </section>
 
-      <button class="desktop-note" type="button" aria-expanded="false">
-        <span class="note-title">欢迎.txt</span>
-        <span class="note-copy">点击桌面图标进入页面</span>
-      </button>
+      <aside class="desktop-note" data-i18n-aria="note.aria" aria-label="桌面便签">
+        <span class="note-title" data-i18n="note.title">欢迎.txt</span>
+        <span class="note-copy" data-i18n="note.copy">欢迎浏览我的个人作品集。</span>
+      </aside>
 
-      <section class="xp-window intro-window" aria-label="桌面预览窗口">
-        <div class="window-titlebar">
-          <span>Portfolio Explorer</span>
-          <div class="window-controls">
-            <button type="button" data-window-minimize aria-label="最小化"></button>
-            <button type="button" data-window-maximize aria-label="最大化"></button>
-            <button type="button" data-window-close aria-label="关闭"></button>
-          </div>
-        </div>
-        <div class="window-body">
-          <p>这是一个 Windows XP 桌面形式的个人作品集入口。</p>
-          <p>“关于我”由原来的“本电脑”改写而来，点击后进入独立页面。</p>
-        </div>
-      </section>
+      <div class="window-layer" aria-live="polite"></div>
     </main>
 
-    <nav class="taskbar" aria-label="任务栏">
+    <nav class="taskbar" data-i18n-aria="taskbar.aria" aria-label="任务栏">
       <button class="start-button" type="button" aria-controls="start-menu" aria-expanded="false">
         <span class="start-logo" aria-hidden="true"></span>
-        开始
+        <span data-i18n="taskbar.start">开始</span>
       </button>
-      <div class="taskbar-apps" aria-label="已打开窗口">
-        <button class="taskbar-tab active" type="button" data-window-restore>桌面</button>
+      <div class="taskbar-apps" data-i18n-aria="taskbar.apps.aria" aria-label="已打开窗口">
+        <button class="taskbar-tab active" type="button" data-taskbar-desktop data-i18n="taskbar.desktop">
+          桌面
+        </button>
       </div>
-      <button class="taskbar-clock" type="button" aria-label="显示当前时间"></button>
+      <button
+        class="taskbar-lang"
+        type="button"
+        data-lang-toggle
+        data-i18n="taskbar.lang"
+        aria-label="Switch language"
+      >
+        中/EN
+      </button>
+      <button
+        class="taskbar-clock"
+        type="button"
+        data-i18n-aria="taskbar.clock.aria"
+        aria-label="显示当前时间"
+      ></button>
     </nav>
 
     <section class="start-menu" id="start-menu" aria-hidden="true">
-      <div class="start-menu-head">Personal Website</div>
-      <a href="pages/about.html">关于我</a>
-      <a href="pages/projects.html">作品集</a>
-      <a href="pages/resume.html">履历</a>
-      <a href="pages/contact.html">联系</a>
+      <header class="start-menu-user">
+        <span class="start-user-avatar" aria-hidden="true"></span>
+        <span class="start-user-name" data-i18n="startMenu.userName">Nemo</span>
+      </header>
+
+      <div class="start-menu-body">
+        <div class="start-menu-left">
+          <div class="start-menu-section-label" data-i18n="startMenu.programs">程序</div>
+          <div class="start-menu-programs">
+            <button type="button" class="start-menu-item" data-open-app="about">
+              <span class="icon-art computer" aria-hidden="true"></span>
+              <span data-i18n="icon.about">关于我</span>
+            </button>
+            <button type="button" class="start-menu-item" data-open-app="projects">
+              <span class="icon-art folder" aria-hidden="true"></span>
+              <span data-i18n="icon.projects">作品集</span>
+            </button>
+            <button type="button" class="start-menu-item" data-open-app="resume">
+              <span class="icon-art document" aria-hidden="true"></span>
+              <span data-i18n="icon.resume">履历</span>
+            </button>
+            <button type="button" class="start-menu-item" data-open-app="contact">
+              <span class="icon-art mail" aria-hidden="true"></span>
+              <span data-i18n="icon.contact">联系</span>
+            </button>
+          </div>
+          <div class="start-menu-left-spacer" aria-hidden="true"></div>
+          <button type="button" class="start-menu-item start-menu-all-programs">
+            <span data-i18n="startMenu.allPrograms">所有程序</span>
+            <span class="start-menu-arrow" aria-hidden="true">▶</span>
+          </button>
+        </div>
+
+        <div class="start-menu-right">
+          <div class="start-menu-section-label" data-i18n="startMenu.links">链接</div>
+          <div class="start-menu-links">
+            <a class="start-menu-link" href="#" data-placeholder-link>
+              <span class="start-link-icon github" aria-hidden="true"></span>
+              <span data-i18n="startMenu.link.github">GitHub</span>
+            </a>
+            <a class="start-menu-link" href="#" data-placeholder-link>
+              <span class="start-link-icon behance" aria-hidden="true"></span>
+              <span data-i18n="startMenu.link.behance">Behance</span>
+            </a>
+            <a class="start-menu-link" href="#" data-placeholder-link>
+              <span class="start-link-icon linkedin" aria-hidden="true"></span>
+              <span data-i18n="startMenu.link.linkedin">LinkedIn</span>
+            </a>
+            <a class="start-menu-link" href="#" data-placeholder-link>
+              <span class="start-link-icon email" aria-hidden="true"></span>
+              <span data-i18n="startMenu.link.email">邮箱</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="start-menu-footer">
+        <button type="button" class="start-menu-power" data-start-action="logoff">
+          <span class="start-power-icon logoff" aria-hidden="true"></span>
+          <span data-i18n="startMenu.logoff">注销</span>
+        </button>
+        <button type="button" class="start-menu-power" data-start-action="shutdown">
+          <span class="start-power-icon shutdown" aria-hidden="true"></span>
+          <span data-i18n="startMenu.shutdown">关闭计算机</span>
+        </button>
+      </footer>
     </section>
 
+    <div class="system-overlay" id="system-overlay" hidden aria-hidden="true">
+      <section class="system-stage system-stage-loading" data-system-stage="shutdown-loading">
+        <div class="system-spinner" aria-hidden="true"></div>
+        <p data-i18n="system.shutdown.loading">正在关机…</p>
+      </section>
+
+      <section class="system-stage system-stage-shutdown" data-system-stage="shutdown-complete">
+        <p class="system-shutdown-message" data-i18n="system.shutdown.safe">
+          现在可以安全地关闭计算机了
+        </p>
+        <button type="button" class="system-restart-button" data-system-action="restart">
+          <span data-i18n="system.shutdown.restart">重新开机</span>
+        </button>
+      </section>
+
+      <section class="system-stage system-stage-loading" data-system-stage="logoff-loading">
+        <div class="system-spinner" aria-hidden="true"></div>
+        <p data-i18n="system.logoff.loading">正在注销…</p>
+      </section>
+
+      <section class="system-stage system-stage-login" data-system-stage="login">
+        <p class="login-hint" data-i18n="system.login.hint">点击登录</p>
+        <button type="button" class="login-account" data-system-action="login">
+          <span class="start-user-avatar login-account-avatar" aria-hidden="true"></span>
+          <span class="login-account-name" data-i18n="startMenu.userName">Nemo</span>
+        </button>
+      </section>
+    </div>
+
+    <template id="template-about">
+      <h1 data-i18n="about.title">关于我</h1>
+      <p data-i18n="about.intro">
+        在这里写你的个人简介：你的专业方向、创作兴趣、正在研究的主题，以及希望别人通过这个网站认识到的你。
+      </p>
+      <h2 data-i18n="about.focus.title">我关注的方向</h2>
+      <ul>
+        <li data-i18n="about.focus.1">交互设计与网页体验</li>
+        <li data-i18n="about.focus.2">视觉叙事与个人品牌表达</li>
+        <li data-i18n="about.focus.3">可继续编辑、可成长的个人作品集系统</li>
+      </ul>
+      <h2 data-i18n="about.tagline.title">一句话介绍</h2>
+      <p data-i18n="about.tagline">
+        我是一个用设计和技术组织想法的人，喜欢把作品集做成可以被探索的空间。
+      </p>
+    </template>
+
+    <template id="template-projects">
+      <h1 data-i18n="projects.title">作品集</h1>
+      <p data-i18n="projects.intro">把你的项目放在这里。每个项目可以写背景、你的角色、过程、结果和链接。</p>
+
+      <figure class="project-video">
+        <video controls preload="metadata" playsinline>
+          <source src="nemo.mp4" type="video/mp4" />
+        </video>
+        <figcaption data-i18n="projects.video.caption">作品演示视频</figcaption>
+      </figure>
+
+      <ul class="project-list">
+        <li class="project-card">
+          <h2 data-i18n="projects.1.title">项目一</h2>
+          <p data-i18n="projects.1.desc">项目简介、使用工具、你的贡献，以及最终成果。</p>
+          <button type="button" class="pdf-link" data-pdf="project-1.pdf" data-i18n="projects.pdf.view">查看 PDF</button>
+        </li>
+        <li class="project-card">
+          <h2 data-i18n="projects.2.title">项目二</h2>
+          <p data-i18n="projects.2.desc">适合放交互、视觉、研究、影像、写作或代码作品。</p>
+          <button type="button" class="pdf-link" data-pdf="project-2.pdf" data-i18n="projects.pdf.view">查看 PDF</button>
+        </li>
+        <li class="project-card">
+          <h2 data-i18n="projects.3.title">项目三</h2>
+          <p data-i18n="projects.3.desc">这里也可以替换成图片、视频链接或更完整的案例研究。</p>
+          <button type="button" class="pdf-link" data-pdf="project-3.pdf" data-i18n="projects.pdf.view">查看 PDF</button>
+        </li>
+      </ul>
+    </template>
+
+    <template id="template-resume">
+      <h1 data-i18n="resume.title">履历</h1>
+      <h2 data-i18n="resume.education.title">教育经历</h2>
+      <p data-i18n="resume.education.desc">学校 / 专业 / 时间。这里可以写课程方向、研究主题或毕业项目。</p>
+      <h2 data-i18n="resume.work.title">工作与实践</h2>
+      <ul>
+        <li data-i18n="resume.work.1">经历一：你的职责、成果和使用的方法。</li>
+        <li data-i18n="resume.work.2">经历二：参与的项目、协作对象和最终交付。</li>
+        <li data-i18n="resume.work.3">经历三：奖项、展览、发表或其它重要节点。</li>
+      </ul>
+      <h2 data-i18n="resume.skills.title">技能</h2>
+      <p data-i18n="resume.skills.desc">设计工具、前端技术、研究方法、语言能力或其它与你作品相关的能力。</p>
+    </template>
+
+    <template id="template-contact">
+      <h1 data-i18n="contact.title">联系</h1>
+      <p data-i18n="contact.intro">把你的邮箱、社交媒体、作品平台或其它联系方式放在这里。</p>
+      <h2 data-i18n="contact.email.title">Email</h2>
+      <p data-i18n="contact.email.value">yourname@example.com</p>
+      <h2 data-i18n="contact.links.title">Links</h2>
+      <ul>
+        <li data-i18n="contact.links.1">Behance / Dribbble / GitHub / Instagram</li>
+        <li data-i18n="contact.links.2">LinkedIn / 小红书 / 公众号 / 其它平台</li>
+      </ul>
+      <h2 data-i18n="contact.collab.title">合作方向</h2>
+      <p data-i18n="contact.collab.desc">可以写你欢迎怎样的合作、实习、委托或交流。</p>
+    </template>
+
+    <div class="pdf-viewer" id="pdf-viewer" hidden aria-hidden="true">
+      <div class="pdf-viewer-window">
+        <div class="pdf-viewer-bar">
+          <span class="pdf-viewer-title" data-pdf-title></span>
+          <button
+            type="button"
+            class="pdf-viewer-close"
+            data-pdf-close
+            data-i18n-aria="window.close"
+            aria-label="关闭"
+          >
+            ✕
+          </button>
+        </div>
+        <iframe class="pdf-viewer-frame" title="PDF" data-pdf-frame></iframe>
+      </div>
+    </div>
+
+    <script src="assets/i18n.js"></script>
     <script src="assets/desktop.js"></script>
   </body>
 </html>
